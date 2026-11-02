@@ -1,0 +1,48 @@
+.campo-com-senha {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+}
+.campo-com-senha .campo-senha-com-olho {
+    width: 100%;
+    padding-right: 48px !important;
+    box-sizing: border-box;
+}
+.campo-com-senha .campo-senha-com-olho::-ms-reveal,
+.campo-com-senha .campo-senha-com-olho::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+.botao-alternar-senha {
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    place-items: center;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: #526477;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+.botao-alternar-senha:hover { background: #edf4f9; color: #0d4f87; }
+.botao-alternar-senha:focus-visible { outline: 2px solid #0d4f87; outline-offset: 1px; }
+.botao-alternar-senha svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+@media (max-width: 600px) {
+    .botao-alternar-senha { width: 46px; height: 46px; }
+    .campo-com-senha .campo-senha-com-olho { padding-right: 52px !important; }
+}

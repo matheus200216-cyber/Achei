@@ -1,0 +1,143 @@
+.detalhe-pagina {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(360px, 1.35fr);
+    align-items: start;
+    gap: 28px;
+    max-width: 1240px;
+    min-height: 480px;
+    margin: 0 auto;
+    padding: 44px 32px;
+    background: #fff;
+    box-sizing: border-box;
+}
+.detalhe-galeria { min-width: 0; }
+.detalhe-carrossel {
+    position: relative;
+    display: grid;
+    min-height: 360px;
+    place-items: center;
+    overflow: hidden;
+    border: 1px solid #e1e6eb;
+    border-radius: 14px;
+    background: #f1f4f7;
+    box-shadow: 0 8px 24px #172b4d18;
+}
+.detalhe-foto-principal {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: contain;
+}
+.detalhe-seta {
+    position: absolute;
+    top: 50%;
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    transform: translateY(-50%);
+    border: 1px solid #ffffffa8;
+    border-radius: 50%;
+    background: #fff;
+    color: #0d4f87;
+    box-shadow: 0 3px 12px #0003;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color .15s ease, transform .15s ease;
+}
+.detalhe-seta:hover { background: #f4d64e; transform: translateY(-50%) scale(1.06); }
+.detalhe-seta:focus-visible { outline: 3px solid #0d4f87; outline-offset: 3px; }
+.detalhe-seta-anterior { left: 16px; }
+.detalhe-seta-proxima { right: 16px; }
+.detalhe-contador {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    padding: 6px 11px;
+    border-radius: 20px;
+    background: #111c;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+}
+.detalhe-sem-foto { display: grid; height: 270px; place-items: center; background: #eee; color: #666; border-radius: 8px; }
+.detalhe-informacoes {
+    align-self: start;
+    margin: 0;
+    padding: 24px;
+    border: 1px solid #d8e1ea;
+    border-radius: 16px;
+    background: #f8fafc;
+    box-shadow: 0 10px 28px #172b4d18;
+}
+.detalhe-informacoes h1 { margin: 0 0 20px; color: #163b5c; text-align: center; font-size: 32px; line-height: 1.2; }
+.detalhe-dado {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 14px;
+    border: 1px solid #e0e6ec;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 6px #172b4d0d;
+    color: #263746;
+    font-size: 15px;
+    line-height: 1.45;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+.detalhe-dado span { font-size: 20px; }
+.detalhe-informacoes h2 { margin: 24px 4px 10px; color: #163b5c; font-size: 18px; }
+.detalhe-descricao {
+    min-height: 85px;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    color: #555;
+    line-height: 1.5;
+}
+.detalhe-aviso { margin: 16px 8px 0; text-align: center; font-size: 12px; font-weight: 700; line-height: 1.5; }
+@media (max-width: 700px) {
+    .detalhe-pagina { grid-template-columns: 1fr; padding: 24px 14px; gap: 18px; }
+    .detalhe-informacoes { align-self: stretch; margin: 0; padding: 20px; }
+    .detalhe-carrossel { min-height: 260px; }
+    .detalhe-foto-principal { height: 300px; }
+    .detalhe-seta-anterior { left: 10px; }
+    .detalhe-seta-proxima { right: 10px; }
+    .detalhe-informacoes h1 { font-size: 26px; }
+}
+@media (max-width: 420px) {
+    .detalhe-pagina { padding: 18px 10px; }
+    .detalhe-informacoes { padding: 15px; }
+    .detalhe-carrossel { min-height: 220px; }
+    .detalhe-foto-principal { height: 250px; }
+    .detalhe-dado { padding: 11px; font-size: 14px; }
+    .detalhe-seta { width: 40px; height: 40px; }
+}
+.botao-voltar-detalhe {
+    display: inline-flex;
+    min-height: 38px;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 16px;
+    padding: 0 13px;
+    border: 1px solid #cbd5df;
+    border-radius: 8px;
+    color: #0d4f87;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color .15s ease, border-color .15s ease;
+}
+.botao-voltar-detalhe:hover {
+    border-color: #0d4f87;
+    background: #edf4f9;
+}
+.botao-voltar-detalhe:focus-visible {
+    outline: 3px solid #0d4f87;
+    outline-offset: 3px;
+}

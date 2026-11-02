@@ -1,0 +1,324 @@
+body.tela-login {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #202020;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-layout {
+    display: flex;
+    width: calc(100% - 30px);
+    min-height: calc(100vh - 26px);
+    margin: 13px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Lateral azul */
+
+.login-lateral {
+    width: 50%;
+    background-color: #104f87;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.login-marca h1 {
+    margin: 0;
+    color: #f4d64e;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+
+.login-marca p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.login-parceria {
+    margin-top: 42px;
+}
+
+.login-parceria > p {
+    margin-bottom: 55px;
+    font-size: 13px;
+}
+
+.login-unisa {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #6fa8d8;
+    opacity: 0.75;
+}
+
+.login-unisa span {
+    font-size: 46px;
+    font-weight: 300;
+    letter-spacing: -3px;
+}
+
+.login-unisa small {
+    font-size: 10px;
+}
+
+/* Lateral branca */
+
+.login-conteudo {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.login-cartao {
+    width: 100%;
+    max-width: 310px;
+    padding: 12px 8px 8px;
+    background-color: #f7f7f7;
+    border: 1px solid #d0d0d0;
+    border-radius: 12px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+}
+
+.login-cartao h2 {
+    margin: 0 0 10px;
+    text-align: center;
+    color: #111111;
+    font-size: 16px;
+}
+
+/* Borda azul interna */
+
+.login-formulario-borda {
+    border: 2px solid #2698df;
+    border-radius: 12px;
+    padding: 28px 8px 35px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.login-campo {
+    margin-bottom: 15px;
+}
+
+.login-campo label {
+    display: block;
+    margin-bottom: 5px;
+    color: #111111;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-campo input {
+    width: 100%;
+    height: 43px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.login-campo input:focus {
+    outline: none;
+    border-color: #2698df;
+    box-shadow: 0 0 0 2px rgba(38, 152, 223, 0.15);
+}
+
+.login-botao {
+    display: block;
+    width: 65%;
+    margin: 32px auto 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #104f87;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-botao:hover {
+    background-color: #083b68;
+}
+
+.login-cadastro {
+    margin: 10px 0 0;
+    text-align: center;
+    color: #104f87;
+    font-size: 12px;
+}
+
+.login-cadastro a {
+    color: #104f87;
+    text-decoration: none;
+}
+
+.login-cadastro a:hover {
+    text-decoration: underline;
+}
+
+.login-cartao:not(.cadastro-cartao) .login-cadastro {
+    margin: 20px 0 0;
+    padding: 14px 8px 4px;
+    border-top: 1px solid #dce6ef;
+    color: #344b60;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.login-cartao:not(.cadastro-cartao) .login-cadastro a {
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+    margin-left: 5px;
+    padding: 0 12px;
+    border-radius: 7px;
+    background: #f4d64e;
+    color: #17324d;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.login-cartao:not(.cadastro-cartao) .login-cadastro a:hover { background: #e8c83b; }
+
+.tela-login .mensagem-erro {
+    margin: 0 0 15px;
+    color: #b42318;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Responsividade */
+
+@media (max-width: 700px) {
+    .login-layout {
+        flex-direction: column;
+        width: calc(100% - 20px);
+        min-height: calc(100vh - 20px);
+        margin: 10px auto;
+    }
+
+    .login-lateral {
+        width: 100%;
+        min-height: 230px;
+        padding: 25px 15px;
+    }
+
+    .login-marca h1 {
+        font-size: 34px;
+    }
+
+    .login-parceria {
+        margin-top: 20px;
+    }
+
+    .login-parceria > p {
+        margin-bottom: 10px;
+    }
+
+    .login-unisa span {
+        font-size: 30px;
+    }
+
+    .login-conteudo {
+        width: 100%;
+        flex: 1;
+        padding: 30px 15px;
+    }
+
+    .login-cartao {
+        max-width: 350px;
+    }
+}
+
+/* Ajustes da tela de cadastro */
+
+.cadastro-cartao {
+    max-width: 380px;
+}
+
+.cadastro-cartao .login-formulario-borda {
+    padding: 22px 12px;
+}
+
+.cadastro-cartao .login-campo {
+    margin-bottom: 12px;
+}
+
+.cadastro-cartao .login-campo input {
+    height: 40px;
+}
+
+.cadastro-cartao .login-botao {
+    margin-top: 22px;
+}
+
+.login-cartao,
+.login-formulario-borda,
+.login-campo,
+.login-campo input { min-width: 0; }
+.cadastro-dados-polo[hidden] { display: none !important; }
+
+@media (max-height: 750px) and (min-width: 701px) {
+    .login-layout {
+        min-height: auto;
+    }
+
+    .login-conteudo {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .login-layout { width: calc(100% - 12px); margin: 6px auto; }
+    .login-lateral { min-height: 190px; }
+    .login-conteudo { padding: 22px 10px; }
+    .cadastro-cartao .login-formulario-borda { padding: 18px 9px; }
+    .cadastro-dados-polo { padding: 11px; }
+    .login-botao { width: 100%; }
+}
+
+@media (max-width: 700px) {
+    .login-cartao:not(.cadastro-cartao) .login-cadastro {
+        margin-top: 22px;
+        padding: 16px 8px 4px;
+        font-size: 15px;
+    }
+    .login-cartao:not(.cadastro-cartao) .login-cadastro a {
+        display: flex;
+        width: max-content;
+        min-width: 180px;
+        min-height: 46px;
+        justify-content: center;
+        margin: 10px auto 0;
+        font-size: 16px;
+    }
+}
+
+.cadastro-cartao:has(.cadastro-dados-polo:not([hidden])) { max-width: 560px; }
+.cadastro-dados-polo { margin: 18px 0; padding: 14px; border: 1px solid #d0dbe5; border-radius: 9px; }
+.cadastro-dados-polo legend { padding: 0 6px; color: #104f87; font-weight: 700; }
+.cadastro-dados-polo > p, #statusCep { color: #526477; font-size: 12px; line-height: 1.45; }
+.cadastro-cartao .login-campo small { display: block; margin-top: 5px; color: #526477; font-size: 11px; }
+.cadastro-progresso { margin: 0 0 18px; color: #526477; font-size: 13px; font-weight: 700; }
+.cadastro-voltar { display: block; margin: 18px auto 0; padding: 9px 18px; border: 1px solid #104f87; border-radius: 5px; background: #fff; color: #104f87; font: inherit; font-weight: 700; cursor: pointer; }
+.cadastro-voltar:hover { background: #eef6fc; }

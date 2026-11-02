@@ -1,0 +1,222 @@
+.admin-pagina {
+    width: calc(100% - 32px);
+    max-width: 1100px;
+    min-height: 620px;
+    margin: 0 auto;
+    padding: 32px 0 44px;
+    box-sizing: border-box;
+}
+.admin-cabecalho {
+    margin-bottom: 24px;
+}
+.admin-cabecalho h1 {
+    margin: 0 0 10px;
+    color: #17324d;
+    font-size: 30px;
+}
+.admin-cabecalho .admin-descricao {
+    margin: 0;
+    color: #526477;
+    line-height: 1.5;
+}
+.admin-link-gerenciar-objetos {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    margin-top: 14px;
+    padding: 0 15px;
+    border-radius: 8px;
+    background: #0d4f87;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.admin-link-gerenciar-objetos:hover { background: #093b66; }
+.admin-etiqueta {
+    margin: 0 0 7px;
+    color: #0d4f87;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.admin-secao {
+    margin-top: 22px;
+    padding: 24px;
+    border: 1px solid #d8e1ea;
+    border-radius: 14px;
+    background: #f8fafc;
+    box-shadow: 0 4px 14px #172b4d12;
+}
+.admin-secao h2 {
+    margin: 0 0 18px;
+    color: #17324d;
+    font-size: 20px;
+}
+.admin-secao > h1 { margin: 0 0 12px; color: #17324d; font-size: 26px; }
+.admin-formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+.admin-formulario label {
+    display: grid;
+    gap: 7px;
+    color: #263746;
+    font-size: 14px;
+    font-weight: 700;
+}
+.admin-ajuda-senha { color: #526477; font-size: 12px; font-weight: 400; line-height: 1.4; }
+.admin-formulario input,
+.admin-formulario select {
+    width: 100%;
+    min-height: 44px;
+    padding: 9px 12px;
+    border: 1px solid #cbd5df;
+    border-radius: 8px;
+    background: #fff;
+    box-sizing: border-box;
+    color: #172b4d;
+    font: inherit;
+    font-weight: 400;
+}
+.admin-formulario input:focus,
+.admin-formulario select:focus {
+    outline: 3px solid #0d4f8726;
+    border-color: #0d4f87;
+}
+.admin-formulario button {
+    align-self: end;
+    min-height: 44px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 8px;
+    background: #0d4f87;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.admin-formulario button:hover { background: #093b66; }
+.admin-mensagem {
+    margin: 0 0 18px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+.admin-mensagem-sucesso {
+    border: 1px solid #9bd3af;
+    background: #effaf2;
+    color: #176b35;
+}
+.admin-mensagem-erro {
+    border: 1px solid #efb4b4;
+    background: #fff3f3;
+    color: #9b2222;
+}
+.admin-tabela-conteiner { overflow-x: auto; }
+.admin-tabela {
+    width: 100%;
+    min-width: 780px;
+    border-collapse: collapse;
+    background: #fff;
+}
+.admin-tabela th,
+.admin-tabela td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e6ec;
+    text-align: left;
+    font-size: 14px;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+}
+.admin-tabela th {
+    color: #17324d;
+    background: #edf3f8;
+}
+.admin-tabela-polos { min-width: 900px; }
+.admin-acoes-celula { min-width: 150px; }
+.admin-acoes-celula form { margin-top: 7px; }
+.admin-acao-editar,
+.admin-acao-excluir {
+    display: inline-flex;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    border: 1px solid #0d4f87;
+    border-radius: 6px;
+    background: #fff;
+    color: #0d4f87;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+.admin-acao-editar:hover { background: #edf4f9; }
+.admin-acao-excluir { border-color: #b42318; color: #b42318; }
+.admin-acao-excluir:hover { background: #fff3f3; }
+.admin-sem-exclusao { display: inline-block; padding: 8px 0; color: #667788; font-size: 12px; }
+.admin-voltar {
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+    margin: 8px 0 2px;
+    color: #0d4f87;
+    font-weight: 700;
+    text-decoration: none;
+}
+.admin-voltar:hover { text-decoration: underline; }
+.admin-formulario-edicao,
+.admin-formulario-polo { max-width: 850px; }
+.admin-edicao-aviso { color: #526477; line-height: 1.5; }
+@media (max-width: 650px) {
+    .admin-pagina { width: calc(100% - 24px); padding-top: 22px; }
+    .admin-secao { padding: 18px; }
+    .admin-formulario { grid-template-columns: 1fr; }
+    .admin-formulario button { width: 100%; }
+    .admin-cabecalho h1 { font-size: 26px; }
+    .admin-tabela-conteiner { margin-right: -6px; }
+    .admin-aprovar-formulario button { min-height: 42px; }
+}
+@media (max-width: 380px) {
+    .admin-pagina { width: calc(100% - 16px); }
+    .admin-secao { padding: 14px; }
+    .admin-mensagem { padding: 10px; font-size: 13px; }
+}
+.admin-formulario [hidden] { display: none !important; }
+
+.admin-aviso-legado {
+    margin: -6px 0 16px;
+    padding: 11px 13px;
+    border-left: 4px solid #c27a10;
+    background: #fff8e8;
+    color: #65430d;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.admin-aprovar-formulario {
+    display: grid;
+    min-width: 145px;
+    gap: 6px;
+}
+.admin-aprovar-formulario select,
+.admin-aprovar-formulario button {
+    min-height: 34px;
+    padding: 6px 8px;
+    border: 1px solid #cbd5df;
+    border-radius: 6px;
+    background: #fff;
+    color: #17324d;
+    font: inherit;
+    font-size: 12px;
+}
+.admin-aprovar-formulario button {
+    border: 0;
+    background: #0d4f87;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+.admin-aprovar-formulario button:hover { background: #093b66; }
